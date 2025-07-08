@@ -790,3 +790,13 @@ footer {
         margin-right: 0;
     }
 }
+
+.developer-link {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.developer-link:hover {
+  color: #111; /* Dark color on hover */
+}
