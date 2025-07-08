@@ -45,3 +45,5 @@ You’ll go head-to-head against a robotic opponent named **BOT-47** in a game o
 🔗 GitHub Repository: [github.com/saadmaz/inky-pinky-polly](https://github.com/saadmaz/inky-pinky-polly)
 
 🌐 Portfolio: www.saadmaz.com
+
+Project Link: [inky-pinky-polly.saadmaz.com](https://inky-pinky-polly.saadmaz.com/)
