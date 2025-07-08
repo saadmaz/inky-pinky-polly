@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inky Pinky Polly - Classic Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <header>
+                <h1>Inky Pinky Polly</h1>
+                <nav>
+                    <button id="read-more-btn" class="nav-btn">Read More</button>
+                </nav>
+            </header>
+            
+            <main class="welcome-content">
+                <div class="game-intro">
+                    <h2>Welcome to Inky Pinky Polly!</h2>
+                    <p>A fun twist on the classic Rock-Paper-Scissors game</p>
+                    <div class="rules-preview">
+                        <div class="rule">Pinky > Inky</div>
+                        <div class="rule">Inky > Polly</div>
+                        <div class="rule">Polly > Pinky</div>
+                    </div>
+                </div>
+                
+                <div class="player-setup">
+                    <input type="text" id="player-name" placeholder="Enter your name" maxlength="20">
+                    <button id="start-game-btn" class="primary-btn">Start Playing</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="container">
+            <header class="game-header">
+                <h1>Inky Pinky Polly</h1>
+                <div class="scores">
+                    <div class="score-card">
+                        <span id="player-name-display">Player</span>
+                        <span id="player-score">0</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="score-card">
+                        <span>BOT-47</span>
+                        <span id="computer-score">0</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="game-content">
+                <div class="game-choices">
+                    <h3>Make your choice:</h3>
+                    <div class="choice-buttons">
+                        <button class="choice-btn" data-choice="pinky">
+                            <div class="choice-icon">🌸</div>
+                            <span>Pinky</span>
+                        </button>
+                        <button class="choice-btn" data-choice="inky">
+                            <div class="choice-icon">🖤</div>
+                            <span>Inky</span>
+                        </button>
+                        <button class="choice-btn" data-choice="polly">
+                            <div class="choice-icon">🦜</div>
+                            <span>Polly</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="round-result" class="round-result hidden">
+                    <div class="choices-display">
+                        <div class="choice-display">
+                            <span>You chose:</span>
+                            <div id="player-choice"></div>
+                        </div>
+                        <div class="choice-display">
+                            <span>BOT-47 chose:</span>
+                            <div id="computer-choice"></div>
+                        </div>
+                    </div>
+                    <div id="round-winner" class="round-winner"></div>
+                </div>
+
+                <div class="game-controls">
+                    <button id="end-game-btn" class="secondary-btn">End Game</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Read More Screen -->
+    <div id="read-more-screen" class="screen">
+        <div class="container">
+            <header>
+                <div class="logo-container">
+                    <div class="logo-placeholder">University Logo 1</div>
+                    <h1>About Inky Pinky Polly</h1>
+                    <div class="logo-placeholder">University Logo 2</div>
+                </div>
+                <button id="back-btn" class="nav-btn">← Back</button>
+            </header>
+            
+            <main class="read-more-content">
+                <div class="developer-info">
+                    <section class="about-project">
+                        <h2>About the Project</h2>
+                        <p>Inky Pinky Polly is a modern web-based twist on the classic Rock-Paper-Scissors game, designed and developed by <strong>Saad Mazhar</strong>. Instead of using rock, paper, and scissors, this game features three original characters: Pinky, Inky, and Polly.</p>
+                    </section>
+
+                    <section class="academic-context">
+                        <h3>🎓 Academic Context</h3>
+                        <p>This project was developed as part of the Level 3 – Introduction to Programming module at the Informatics Institute of Technology (IIT). It serves as a hands-on application of core programming concepts, frontend design, and backend integration.</p>
+                    </section>
+
+                    <section class="game-rules">
+                        <h3>🎮 Game Rules</h3>
+                        <ul>
+                            <li><strong>Pinky beats Inky</strong></li>
+                            <li><strong>Inky beats Polly</strong></li>
+                            <li><strong>Polly beats Pinky</strong></li>
+                        </ul>
+                        <p>Players compete against a robotic opponent named BOT-47. The game logic determines a winner after each round, and scores are updated in real time.</p>
+                    </section>
+
+                    <section class="tech-stack">
+                        <h3>🧱 Technology Stack</h3>
+                        <ul>
+                            <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                            <li><strong>Backend:</strong> Python + Flask</li>
+                            <li><strong>Communication:</strong> REST API</li>
+                            <li><strong>Assets:</strong> Sound effects, animations, and responsive images</li>
+                        </ul>
+                    </section>
+
+                    <section class="key-features">
+                        <h3>✨ Key Features</h3>
+                        <ul>
+                            <li>Responsive design (works on desktop and mobile)</li>
+                            <li>Live score tracking</li>
+                            <li>End-game modal with final results</li>
+                            <li>Basic animations and sound effects</li>
+                            <li>Local score memory using localStorage</li>
+                            <li>Dark/Light mode toggle</li>
+                        </ul>
+                    </section>
+                    
+                    <section class="resources">
+                        <h3>📥 Resources</h3>
+                        <div class="links-section">
+                            <a href="#" class="link-btn" id="github-link">
+                                <span>🔗</span>
+                                View on GitHub
+                            </a>
+                            <a href="#" class="link-btn" id="docs-link">
+                                <span>📄</span>
+                                Download Project Documentation
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <div id="final-scores"></div>
+            <div id="final-winner"></div>
+            <div class="modal-actions">
+                <button id="play-again-btn" class="primary-btn">Play Again</button>
+                <button id="back-to-menu-btn" class="secondary-btn">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Developed by Saad Mazhar. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
