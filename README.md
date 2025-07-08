@@ -42,8 +42,6 @@ You’ll go head-to-head against a robotic opponent named **BOT-47** in a game o
    ```bash
    cd backend
 
-
-#📄 Documentation & Links
-🔗 GitHub Repository: github.com/saadmaz/inky-pinky-polly
+🔗 GitHub Repository: [github.com/saadmaz/inky-pinky-polly](https://github.com/saadmaz/inky-pinky-polly)
 
 🌐 Portfolio: www.saadmaz.com
