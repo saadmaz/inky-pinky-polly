@@ -104,31 +104,31 @@ header {
     margin-bottom: 40px;
 }
 
+/* Logo Container and University Logos */
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 25px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.logo-placeholder {
+.logo-img {
     width: 80px;
     height: 80px;
-    background: var(--accent-blue);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
-    font-size: 12px;
-    text-align: center;
-    transition: all 0.3s ease;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 2px 5px var(--shadow);
+    background: var(--bg-secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo-placeholder:hover {
+.logo-img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px var(--shadow-hover);
+    box-shadow: 0 4px 12px var(--shadow-hover);
 }
 
 h1 {
@@ -137,6 +137,13 @@ h1 {
     text-shadow: 2px 2px 4px var(--shadow);
     margin: 0;
     transition: color 0.3s ease;
+}
+
+.logo-container h1 {
+    font-size: 2.5rem;
+    color: var(--accent-blue);
+    text-shadow: 1px 1px 3px var(--shadow);
+    margin: 10px;
 }
 
 h2 {
@@ -668,6 +675,17 @@ footer {
     margin-top: 40px;
 }
 
+.developer-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.developer-link:hover {
+    color: var(--accent-teal);
+    text-decoration: underline;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -712,48 +730,20 @@ footer {
         font-size: 2rem;
     }
     
-    /* .logo-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .logo-placeholder {
-        width: 60px;
-        height: 60px;
-        font-size: 10px;
-    } */
-    
     .logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
         gap: 20px;
-        flex-wrap: wrap; /* for mobile responsiveness */
-        text-align: center;
     }
 
-    .circle-logo {
+    .logo-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo-img {
         width: 70px;
         height: 70px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #ccc;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-
-    /* Title should not look cramped on mobile */
-    .logo-container h1 {
-        margin: 10px 0;
-        font-size: 1.6rem;
-    }
-
-    /* Optional: responsive tweak */
-@media (max-width: 600px) {
-    .logo-container {
-        flex-direction: column;
-    }
-}
-
+    
     .choice-buttons {
         gap: 15px;
     }
@@ -792,6 +782,12 @@ footer {
     }
 }
 
+@media (max-width: 600px) {
+    .logo-container {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 480px) {
     .choice-buttons {
         flex-direction: column;
@@ -821,13 +817,3 @@ footer {
         margin-right: 0;
     }
 }
-
-    .developer-link {
-        color: inherit;
-        text-decoration: underline;
-        transition: color 0.3s;
-    }
-
-    .developer-link:hover {
-        color: #111; /* Dark color on hover */
-    }
